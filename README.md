@@ -12,3 +12,7 @@ a new message appears to let the user know it is still working on the submission
 
 Libraries used: Bootstrap forms, Bootstrap Validator <br>
 Technologies: HTML, CSS, Bootstrap, Javascript and jQuery
+
+To Run this project on your local machine: 
+1. Clone the project using git clone https://github.com/vyerneni17/bootstrap-forms.git.
+2. Open the index.html file to see the site in action.
