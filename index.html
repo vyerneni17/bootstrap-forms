@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        .form-control:focus{border-color: deeppink;  box-shadow: none; -webkit-box-shadow: none;}
+        .has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+    </style>
+</head>
+<body>
+
+<!-- Begin Header -->
+<header>
+    <div class="row">
+        <img class="center-block" src="images/jobox.png"/>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Bootstrap JS -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.js"></script>
+<script type= "text/javascript" src="index.js"></script>
+
+<script>
+    function changeText(submitId) {
+        setTimeout(function(){
+            submitId.value = "Sending...";
+            setTimeout(function(){
+                submitId.value = "Hang tight, We're almost there!"
+            },4000)
+        },10000);
+    }
+</script>
+
+<!-- Begin Container -->
+<div class="container">
+
+    <!-- Row Begins -->
+    <div class="row">
+        <div class="col-md-offset-1 col-md-5 col-sm-7 col-xs-12">
+            <!-- Heading -->
+            <h1 id="heading">Submit Your Cause</h1>
+
+            <!-- Sub-text -->
+            <p class="col-md-10">
+                Apply to get more details about how lemonade can empower your cause and help you fundraise
+            </p>
+
+            <!-- Form Begin -->
+            <form class="col-md-10 col-sm-12 col-xs-12" role="form" action= " " method="post" id="contact_form" data-toggle="validator">
+                <!-- First Name -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="first_name" placeholder="First Name" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <!-- Last Name -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="last_name" placeholder="Last Name" class="form-control" type="text" required>
+                    </div>
+                </div>
+                <!-- Phone Number -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input name="phone" maxlength="10" placeholder="(555) 555-5555" class="form-control" type="tel" required>
+                    </div>
+                </div>
+                <!-- Twitter Name -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                        <input name="twitter_name" class="form-control" type="text" placeholder="Twitter UserName" id="twitter-name-text" required>
+                    </div>
+                </div>
+            </form>
+            <!-- Form End -->
+
+        </div>
+
+        <div class="col-md-offset-1 col-md-3 col-sm-offset-1 col-sm-4 hidden-xs">
+            <img id="image" src="images/iphone_img.png">
+        </div>
+    </div>
+    <!-- Row Ends -->
+
+    <!-- Success message -->
+    <div class="row col-md-offset-1 col-md-9">
+        <div class="alert alert-success" role="alert" id="success_message">
+            <i class="glyphicon glyphicon-thumbs-up"></i>
+            Thank You! Your information has been successfully submitted.
+        </div>
+    </div>
+
+    <!-- Button -->
+    <div class="form-group">
+        <div class="row col-md-offset-1 col-md-9">
+            <button type="submit" form="contact_form" class="btn btn-primary btn-block submit circle" id="submitButton">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                <span> SEND</span>
+            </button>
+        </div>
+    </div>
+
+</div>
+<!-- End Container -->
+
+</body>
+</html>
