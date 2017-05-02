@@ -7,6 +7,47 @@ $(document).ready(function() {
                 validating: 'glyphicon glyphicon-refresh'
             },
             fields: {
+                full_name: {
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                        },
+                        notEmpty: {
+                            message: 'Please enter your Full Name'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please enter your Email Address'
+                        },
+                        emailAddress: {
+                            regexp: '^[^@\\s]+@([^@\\s]+\\.)+[^@\\s]+$',
+                            message: 'Please enter a valid Email Address'
+                        },
+                    }
+                },
+                nonprofit_name: {
+                    validators: {
+                        stringLength: {
+                            min: 2,
+                        },
+                        notEmpty: {
+                            message: 'Please enter your NonProfit Name'
+                        }
+                    }
+                },
+                website: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please enter a Website URL'
+                        },
+                        uri: {
+                            message: 'The URL is not valid'
+                        }
+                    }
+                },
                 first_name: {
                     validators: {
                         stringLength: {
@@ -30,7 +71,7 @@ $(document).ready(function() {
                 phone: {
                     validators: {
                         notEmpty: {
-                            message: 'Please enter your Phone Number'
+                            message: 'Please enter a Phone Number'
                         },
                         phone: {
                             country: 'US',
